@@ -20,17 +20,17 @@ public class TestClass1 {
 	}
 	@Test
 	public void Test1() {
-		driver.navigate().to("http://www.Automationtalks.com");
+		driver.navigate().to("http://localhost:4200/");
 		System.out.println("Test 1 title is" + driver.getTitle());
 	}
 	@Test
 	public void Test2() {
-		driver.navigate().to("http://www.Automationtalks.com");
+		driver.navigate().to("http://localhost:4200/");
 		System.out.println("Test 2 title is" + driver.getTitle());
 	}
 	@Test
 	public void Test3() {
-		driver.navigate().to("http://www.Automationtalks.com");
+		driver.navigate().to("http://localhost:4200/");
 		System.out.println("Test 3 title is" +driver.getTitle());
 	}
 	@AfterMethod
