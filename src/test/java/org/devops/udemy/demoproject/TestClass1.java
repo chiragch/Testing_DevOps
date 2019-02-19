@@ -31,8 +31,14 @@ public class TestClass1 {
 	public void Test2() {
 		driver.navigate().to("http://localhost:4200/");
 		System.out.println("Test 2 title is" + driver.getTitle());
-		String actualTitle = "NoDQ - Wrestling PodCast";
-		Assert.assertEquals(driver.getTitle(), actualTitle);
+		String actualTitle = "NoDQ - Wrestling PodCat";
+		try {
+			Assert.assertEquals(driver.getTitle(), actualTitle);
+		}catch(AssertionError e){
+			 e.printStackTrace();
+		     Assert.fail();
+		}
+		
 		
 	}
 	@Test
