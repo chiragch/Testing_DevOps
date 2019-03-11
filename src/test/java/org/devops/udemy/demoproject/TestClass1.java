@@ -17,14 +17,20 @@ import org.testng.annotations.Test;
 public class TestClass1 {
 	
 	public static WebDriver driver;
+	public static final String USERNAME = "chiragjain26";
+	public static final String AUTOMATE_KEY = "4pp7v9grzqZsyBkZQUdY";
+	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+
 	@BeforeMethod
 	public void launchDriver() throws MalformedURLException {
-		DesiredCapabilities dr = null;
-		dr = DesiredCapabilities.chrome();
-		dr.setBrowserName("chrome");
-		dr.setPlatform(Platform.WIN10);
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\cchop\\OneDrive\\Desktop\\Tools\\chrome versions\\chromedriver_win32 (2)\\chromedriver.exe");
-		driver = new RemoteWebDriver(new URL("http://172.20.5.87:4444/wd/hub"), dr);
+		 DesiredCapabilities caps = new DesiredCapabilities();
+	     caps.setCapability("browser", "Firefox");
+	     caps.setCapability("browser_version", "60.0");
+	     caps.setCapability("os", "Windows");
+	     caps.setCapability("os_version", "7");
+	     caps.setCapability("resolution", "1024x768");
+
+	    driver = new RemoteWebDriver(new URL(URL), caps);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().fullscreen();
 	}
