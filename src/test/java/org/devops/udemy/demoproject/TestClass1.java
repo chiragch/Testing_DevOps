@@ -36,7 +36,7 @@ public class TestClass1 {
 	}
 	@Test
 	public void Test1() {
-		driver.navigate().to("http://localhost:4200/");
+		driver.navigate().to("https://automationtalks.com/");
 		System.out.println("Test 1 title is" + driver.getTitle());
 		
 		
