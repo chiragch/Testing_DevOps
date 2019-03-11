@@ -45,7 +45,7 @@ public class TestClass1 {
 	}
 	@Test
 	public void Test1() {
-		driver.navigate().to("http://localhost:4200/");
+		driver.navigate().to("https://automationtalks.com/");
 		System.out.println("Test 1 title is" + driver.getTitle());
 		
 		
@@ -53,7 +53,7 @@ public class TestClass1 {
 	}
 	@Test
 	public void Test2() {
-		driver.navigate().to("http://localhost:4200/");
+		driver.navigate().to("https://automationtalks.com/");
 		System.out.println("Test 2 title is" + driver.getTitle());
 		String actualTitle = "NoDQ - Wrestling podCat";
 		try {
@@ -67,7 +67,7 @@ public class TestClass1 {
 	}
 	@Test
 	public void Test3() {
-		driver.navigate().to("http://localhost:4200/");
+		driver.navigate().to("https://automationtalks.com/");
 		System.out.println("Test 3 title is" +driver.getTitle());
 	}
 	@AfterMethod
