@@ -17,26 +17,35 @@ import org.testng.annotations.Test;
 public class TestClass1 {
 	
 	public static WebDriver driver;
-	public static final String USERNAME = "chiragjain26";
+	/*public static final String USERNAME = "chiragjain26";
 	public static final String AUTOMATE_KEY = "4pp7v9grzqZsyBkZQUdY";
-	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+	public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";*/
 
 	@BeforeMethod
 	public void launchDriver() throws MalformedURLException {
-		 DesiredCapabilities caps = new DesiredCapabilities();
+		/* DesiredCapabilities caps = new DesiredCapabilities();
 	     caps.setCapability("browser", "Firefox");
 	     caps.setCapability("browser_version", "60.0");
 	     caps.setCapability("os", "Windows");
 	     caps.setCapability("os_version", "7");
 	     caps.setCapability("resolution", "1024x768");
 
-	    driver = new RemoteWebDriver(new URL(URL), caps);
+	    driver = new RemoteWebDriver(new URL(URL), caps);*/
+		
+		DesiredCapabilities dr = null;
+		dr = DesiredCapabilities.chrome();
+		dr.setBrowserName("chrome");
+		dr.setPlatform(Platform.WIN10);
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\cchop\\OneDrive\\Desktop\\Tools\\chrome versions\\chromedriver_win32 (2)\\chromedriver.exe");
+		driver = new ChromeDriver();
+		driver = new RemoteWebDriver(new URL("http://10.216.27.221:4444/wd/hub"), dr);
+		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().fullscreen();
 	}
 	@Test
 	public void Test1() {
-		driver.navigate().to("https://automationtalks.com/");
+		driver.navigate().to("http://localhost:4200/");
 		System.out.println("Test 1 title is" + driver.getTitle());
 		
 		

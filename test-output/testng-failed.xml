@@ -7,8 +7,6 @@
         <methods>
           <include name="quit"/>
           <include name="Test2"/>
-          <include name="Test1"/>
-          <include name="Test3"/>
           <include name="launchDriver"/>
         </methods>
       </class> <!-- org.devops.udemy.demoproject.TestClass1 -->
