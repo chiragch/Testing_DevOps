@@ -24,7 +24,7 @@ public class TestClass1 {
 		dr.setBrowserName("chrome");
 		dr.setPlatform(Platform.WIN10);
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\cchop\\OneDrive\\Desktop\\Tools\\chrome versions\\chromedriver_win32 (2)\\chromedriver.exe");
-		driver = new RemoteWebDriver(new URL("http://172.30.2.58:4444/wd/hub"), dr);
+		driver = new RemoteWebDriver(new URL("http://10.216.20.8:4444/wd/hub"), dr);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().fullscreen();
 	}
