@@ -42,7 +42,7 @@ public class TestClass1 {
 	@Test
 	public void Test2() {
 		driver.navigate().to("http://localhost:8000");
-		System.out.println("Test 2 title is" + driver.getTitle());
+		System.out.println("Test 2 title is testing " + driver.getTitle());
 	}
 	@Test
 	public void Test3() {
